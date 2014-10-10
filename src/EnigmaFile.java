@@ -6,7 +6,7 @@ private BufferedReader reader;
 		super(p);
 		EnigmaMachine em = new EnigmaMachine(p);
 		try {
-			reader = new BufferedReader(new FileReader("Codes.txt"));
+			reader = new BufferedReader(new FileReader("files/Codes.txt"));
 		} catch (FileNotFoundException fnfe) {
 			System.err.println("Error! The file you requested was not found!");
 		}
@@ -73,7 +73,7 @@ private BufferedReader reader;
 	}
 	public void saveCode(String code){
 		try {
-			PrintStream pst = new PrintStream("Decodes.txt");
+			PrintStream pst = new PrintStream("files/Decodes.txt");
 			pst.print(code);
 		} catch (FileNotFoundException fnfe) {
 			System.err.println("Error! File not found!");
